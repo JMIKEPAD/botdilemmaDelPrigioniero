@@ -1,5 +1,5 @@
 const Camorra = require("./botPrisoner");
-const bot = new Camorra()
+const bot = new Camorra();
 
 
 
