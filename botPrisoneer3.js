@@ -1,9 +1,9 @@
 const BaseBot = require("./baseBot");
 
-class Camorra extends BaseBot {
+class Ndrangheta extends BaseBot {
     constructor() {
         super();
-        this.gameHistory = [];
+        this.gameHistory = [1,1,1,1,1,1,1,0,0,0,0,1];
 
         this.behaveiour = -1;
     }
@@ -11,9 +11,9 @@ class Camorra extends BaseBot {
 
     play() {
         if (this.behaveiour === -1) {
-            return Math.floor(Math.random() * (2 - 0) + 0);
+            return 1;
         } else {
-            return this.behaveiour;
+            return 0;
         }
     }
 
@@ -34,7 +34,7 @@ class Camorra extends BaseBot {
 
         this.gameHistory.push(number);
 
-        if (this.gameHistory.length >= 5) {
+        if (this.gameHistory.length >= 10) {
 
             let cooperativeHistory=this.gameHistory.filter(v => v === 1);
 
@@ -63,4 +63,4 @@ class Camorra extends BaseBot {
 }
 
 
-module.exports = Camorra
+module.exports = Ndrangheta
